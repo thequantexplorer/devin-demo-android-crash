@@ -25,4 +25,9 @@ class ListSummaryTest {
 
         assertEquals("0 of 2 left · last added Bread", ListSummary.headline(items))
     }
+
+    @Test
+    fun emptyListShowsFriendlyMessage() {
+        assertEquals("Your list is empty · add an item above", ListSummary.headline(emptyList()))
+    }
 }
